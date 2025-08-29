@@ -16,18 +16,87 @@
 }
 
 * { box-sizing: border-box; }
-html,body { height:100%; }
+
+html {
+  min-height: 100%;
+  background: linear-gradient(135deg, #0f1724, #071129, #1e3c72, #2a5298);
+  background-size: 400% 400%; /* make it large enough to scroll */
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; } /* shift to the right */
+  100% { background-position: 100% 50%; } /* returns smoothly */
+}
+
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: #E6EEF6;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: transparent; /* body shouldn’t override the html background */
+}
+
+
+
 body{
-  margin:0;
-  min-height:100%;
-  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  margin: 0;
+  min-height: 100%;
+  background: linear-gradient(135deg, #0f1724, #071129, #1e3c72, #2a5298);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
   color: #E6EEF6;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
   -webkit-tap-highlight-color: transparent;
+  
 }
+
+.language-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+
+.language-card {
+  background: var(--glass);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(94, 234, 212, 0.6); /* glow color */
+  background: rgba(255, 255, 255, 0.08); /* subtle brighten */
+}
+
+
+.language-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.rating-bar {
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.rating-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #5eead4, #2a5298);
+  border-radius: 8px;
+}
+
 
 .underlay{
   position: fixed;
