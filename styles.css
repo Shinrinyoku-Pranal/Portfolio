@@ -1,12 +1,12 @@
 
 :root{
-  --bg-1: #0f1724;         /* deep navy */
-  --bg-2: #071129;         /* darker blue */
+  --bg-1: #0f1724; 
+  --bg-2: #071129;
   --glass: rgba(255,255,255,0.06);
   --glass-2: rgba(255,255,255,0.03);
   --muted: rgba(255,255,255,0.7);
-  --accent: #8BE5D0;       /* teal mint */
-  --accent-2: #8C7CFF;     /* purple */
+  --accent: #8BE5D0;
+  --accent-2: #8C7CFF;
   --card-shadow: 0 8px 30px rgba(2,6,23,0.6);
   --radius-lg: 18px;
   --radius-md: 12px;
@@ -20,17 +20,16 @@
 html {
   min-height: 100%;
   background: linear-gradient(135deg, #0f1724, #071129, #1e3c72, #2a5298);
-  background-size: 400% 400%; /* make it large enough to scroll */
+  background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
 }
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; } /* shift to the right */
-  100% { background-position: 100% 50%; } /* returns smoothly */
+  50% { background-position: 100% 50%; } 
+  100% { background-position: 100% 50%; }
 }
 
-/* Tablet: 900px and below */
 @media (max-width: 900px){
   header{
     grid-template-columns: 1fr;
@@ -40,18 +39,18 @@ html {
   header nav{
     justify-self: start;
     margin-top: 10px;
-    flex-wrap: wrap;  /* allows nav items to wrap */
+    flex-wrap: wrap;  
   }
   .social-link-container{ margin-left: 0; }
   .project-image-container{ width:120px; height:86px; }
   .tenure{ min-width: 70px; font-size:12px; }
   .card-header{ font-size:15px; }
   .experience-card, .project-card{
-    flex-direction: row; /* keep flex row on tablets */
+    flex-direction: row;
   }
 }
 
-/* Mobile: 520px and below */
+
 @media (max-width: 520px){
   header{ padding: 18px; margin: 18px; border-radius: 14px; }
   main{ padding: 0 16px 60px; }
@@ -65,7 +64,7 @@ html {
   .experience-contents,
   .project-contents,
   .certification-contents{
-    padding: 12px; /* reduce padding for smaller screens */
+    padding: 12px;
   }
   .tag-container{
     justify-content: flex-start;
@@ -86,9 +85,8 @@ body {
   min-height: 100%;
   color: #E6EEF6;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: transparent; /* body shouldn’t override the html background */
+  background: transparent;
 }
-
 
 
 body{
@@ -135,12 +133,12 @@ body{
 
 .language-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px 6px rgba(139,124,255,0.7); /* glowing gradient */
+  box-shadow: 0 0 20px 6px rgba(139,124,255,0.7);
 }
 
 .language-bar {
   width: 100%;
-  height: 6px; /* thin bar */
+  height: 6px; 
   background: rgba(255,255,255,0.05);
   border-radius: 3px;
   overflow: hidden;
@@ -436,7 +434,6 @@ main{
   transition: transform 0.3s ease;
 }
 
-/* --------- Animations --------- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
