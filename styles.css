@@ -30,6 +30,56 @@ html {
   100% { background-position: 100% 50%; } /* returns smoothly */
 }
 
+/* Tablet: 900px and below */
+@media (max-width: 900px){
+  header{
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 22px;
+  }
+  header nav{
+    justify-self: start;
+    margin-top: 10px;
+    flex-wrap: wrap;  /* allows nav items to wrap */
+  }
+  .social-link-container{ margin-left: 0; }
+  .project-image-container{ width:120px; height:86px; }
+  .tenure{ min-width: 70px; font-size:12px; }
+  .card-header{ font-size:15px; }
+  .experience-card, .project-card{
+    flex-direction: row; /* keep flex row on tablets */
+  }
+}
+
+/* Mobile: 520px and below */
+@media (max-width: 520px){
+  header{ padding: 18px; margin: 18px; border-radius: 14px; }
+  main{ padding: 0 16px 60px; }
+  .experience-card, .project-card{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-image-container{ width: 100%; height: 170px; }
+  .sticky-header { position: static; margin-bottom: 8px; }
+  .about-contents p,
+  .experience-contents,
+  .project-contents,
+  .certification-contents{
+    padding: 12px; /* reduce padding for smaller screens */
+  }
+  .tag-container{
+    justify-content: flex-start;
+  }
+  .language-card{
+    padding: 10px;
+  }
+  header h1{ font-size: clamp(20px, 6vw, 28px); }
+  header h2{ font-size: clamp(16px, 4vw, 22px); padding-left:0; }
+  header nav a{ font-size:12px; padding: 6px 10px; }
+  footer{ padding: 16px; font-size:12px; }
+}
+
+
 
 body {
   margin: 0;
