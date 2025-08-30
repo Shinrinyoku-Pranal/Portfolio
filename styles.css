@@ -105,6 +105,10 @@ body{
   -webkit-tap-highlight-color: transparent;
   
 }
+.my-container {
+  width: 250px;
+  overflow-wrap: break-word;
+}
 
 .language-category {
   margin-top: 16px;
@@ -183,6 +187,8 @@ body{
     linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.48));
   mix-blend-mode: overlay;
   z-index: 0;
+  max-width: 250px;
+  overflow-wrap: break-word;
 }
 
 header{
