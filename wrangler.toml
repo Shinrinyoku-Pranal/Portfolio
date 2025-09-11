@@ -1,0 +1,6 @@
+name = "portfolio-worker"   # <-- change from "pranals-portfolio"
+main = "index.js"
+compatibility_date = "2025-09-03"
+
+[site]
+bucket = "./"
